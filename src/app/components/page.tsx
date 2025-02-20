@@ -1,3 +1,5 @@
+import { Terminal } from 'lucide-react';
+
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -5,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 
 const ComponentsPage = () => {
@@ -46,6 +49,18 @@ const ComponentsPage = () => {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </div>
+
+        {/* Alert */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Alert</h4>
+          <Alert>
+            <Terminal className="h-4 w-4" />
+            <AlertTitle>Heads up!</AlertTitle>
+            <AlertDescription>
+              You can add components to your app using the cli.
+            </AlertDescription>
+          </Alert>
         </div>
 
         {/* Button */}
