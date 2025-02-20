@@ -4,6 +4,8 @@ import type { PropsWithChildren } from 'react';
 import { CoreLayout } from '@/common/components/CoreLayout';
 import { inter } from '@/common/fonts';
 import { cn } from '@/common/functions/cn';
+
+import { Providers } from '@/app/providers';
 import '@/common/styles/main.css';
 
 export const viewport: Viewport = {
@@ -29,10 +31,17 @@ export const metadata: Metadata = {
 
 const GlobalLayout = ({ children }: PropsWithChildren) => {
   return (
-    <html className={cn(inter.variable)} lang="en">
-      <meta content="VAPI" name="apple-mobile-web-app-title" />
+    <html suppressHydrationWarning className={cn(inter.variable)} lang="en">
+      <meta content="app" name="apple-mobile-web-app-title" />
       <body>
-        <CoreLayout>{children}</CoreLayout>
+        <Providers
+          disableTransitionOnChange
+          enableSystem
+          attribute="class"
+          defaultTheme="system"
+        >
+          <CoreLayout>{children}</CoreLayout>
+        </Providers>
       </body>
     </html>
   );
