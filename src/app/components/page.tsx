@@ -21,6 +21,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 
 const ComponentsPage = () => {
@@ -110,6 +111,18 @@ const ComponentsPage = () => {
               src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
             />
           </AspectRatio>
+        </div>
+
+        {/* Avatar */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Avatar</h4>
+          <Avatar>
+            <AvatarImage
+              alt="@airfoil-frontend"
+              src="https://github.com/airfoil-frontend.png"
+            />
+            <AvatarFallback>AF</AvatarFallback>
+          </Avatar>
         </div>
 
         {/* Button */}
