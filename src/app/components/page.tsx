@@ -1,4 +1,4 @@
-import { Terminal } from 'lucide-react';
+import { Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
 
 import { ModeToggle } from '@/components/toggle-mode';
@@ -23,12 +23,27 @@ import {
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const ComponentsPage = () => {
   return (
     <div className="bg-background">
-      <div className="bg-background sticky top-0 flex w-full items-start justify-between border-b border-gray-500/20 px-4 py-4 shadow-sm">
+      <div className="bg-background sticky top-0 z-10 flex w-full items-start justify-between border-b border-gray-500/20 px-4 py-4 shadow-sm">
         <div className="flex flex-col">
           <h2 className="text-xl font-bold">Components</h2>
           <p className="text-sm text-gray-500">
@@ -130,6 +145,80 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Badge</h4>
           <Badge>Badge</Badge>
+        </div>
+
+        {/* Breadcrumb */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Breadcrumb</h4>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center gap-1">
+                    <BreadcrumbEllipsis className="h-4 w-4" />
+                    <span className="sr-only">Toggle menu</span>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start">
+                    <DropdownMenuItem>Documentation</DropdownMenuItem>
+                    <DropdownMenuItem>Themes</DropdownMenuItem>
+                    <DropdownMenuItem>GitHub</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/docs/components">
+                  Components
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <Slash />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center gap-1">
+                    <BreadcrumbEllipsis className="h-4 w-4" />
+                    <span className="sr-only">Toggle menu</span>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start">
+                    <DropdownMenuItem>Documentation</DropdownMenuItem>
+                    <DropdownMenuItem>Themes</DropdownMenuItem>
+                    <DropdownMenuItem>GitHub</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <Slash />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/docs/components">
+                  Components
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <Slash />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
         </div>
 
         {/* Button */}
