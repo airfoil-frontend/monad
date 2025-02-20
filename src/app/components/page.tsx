@@ -1,5 +1,8 @@
+'use client';
+
 import { Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 import { ModeToggle } from '@/components/toggle-mode';
 import {
@@ -33,6 +36,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -41,6 +45,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const ComponentsPage = () => {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+
   return (
     <div className="bg-background">
       <div className="bg-background sticky top-0 z-10 flex w-full items-start justify-between border-b border-gray-500/20 px-4 py-4 shadow-sm">
@@ -232,6 +238,22 @@ const ComponentsPage = () => {
             <Button variant="ghost">Button</Button>
             <Button variant="link">Button</Button>
           </div>
+        </div>
+
+        {/* Calendar */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Calendar</h4>
+          <Calendar
+            className="rounded-md border shadow"
+            mode="single"
+            selected={date}
+            onSelect={setDate}
+          />
+        </div>
+
+        {/* Button */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Button</h4>
         </div>
       </div>
     </div>
