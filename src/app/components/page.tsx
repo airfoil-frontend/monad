@@ -22,6 +22,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
 const ComponentsPage = () => {
@@ -123,6 +124,12 @@ const ComponentsPage = () => {
             />
             <AvatarFallback>AF</AvatarFallback>
           </Avatar>
+        </div>
+
+        {/* Badge */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Badge</h4>
+          <Badge>Badge</Badge>
         </div>
 
         {/* Button */}
