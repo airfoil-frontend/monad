@@ -224,7 +224,14 @@ const ComponentsPage = () => {
         {/* Button */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Button</h4>
-          <Button>Button</Button>
+          <div className="flex flex-row flex-wrap items-center gap-4">
+            <Button>Button</Button>
+            <Button variant="secondary">Button</Button>
+            <Button variant="destructive">Button</Button>
+            <Button variant="outline">Button</Button>
+            <Button variant="ghost">Button</Button>
+            <Button variant="link">Button</Button>
+          </div>
         </div>
       </div>
     </div>
