@@ -16,15 +16,19 @@
   // prettier extension setting
   "editor.formatOnSave": true,
   "[javascript]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.rulers": [80],
@@ -39,9 +43,9 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   //  Intellisense for taiwind variants: https://www.tailwind-variants.org/docs/getting-started#intellisense-setup-optional
   // (uncomment when needed)
-  // "tailwindCSS.experimental.classRegex": [
-  //   ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  // ]
+  "tailwindCSS.experimental.classRegex": [
+    ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
   // required for tailwind v4 for intellisense to work
   "tailwindCSS.experimental.configFile": "src/common/styles/main.css"
 }
