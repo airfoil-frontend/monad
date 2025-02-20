@@ -10,6 +10,7 @@ const compat = new FlatCompat({
  */
 const eslintConfig = [
   ...compat.config({
+    ignorePatterns: ['node_modules', '.next', 'out', 'public'],
     extends: ['next/core-web-vitals', 'next/typescript'],
     plugins: ['simple-import-sort', 'import'],
     rules: {
