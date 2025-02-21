@@ -1,11 +1,13 @@
 import { Metadata, Viewport } from 'next';
 import type { PropsWithChildren } from 'react';
+import { Toaster } from 'sonner';
 
 import { CoreLayout } from '@/common/components/CoreLayout';
 import { inter } from '@/common/fonts';
 import { cn } from '@/common/functions/cn';
 
 import { Providers } from '@/app/providers';
+
 import '@/common/styles/main.css';
 
 export const viewport: Viewport = {
@@ -41,6 +43,7 @@ const GlobalLayout = ({ children }: PropsWithChildren) => {
           defaultTheme="system"
         >
           <CoreLayout>{children}</CoreLayout>
+          <Toaster />
         </Providers>
       </body>
     </html>
