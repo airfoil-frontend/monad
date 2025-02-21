@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronsUpDown, Slash, Terminal } from 'lucide-react';
+import { Bold, ChevronsUpDown, Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -115,6 +115,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
+import { Toggle } from '@/components/ui/toggle';
 
 const ComponentsPage = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -760,6 +762,30 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Tabs</h4>
           <TabsDemo />
+        </div>
+
+        {/* Textarea */}
+        <div className="flex w-full max-w-sm flex-col space-y-4">
+          <h4 className="text-lg font-medium">Textarea</h4>
+          <Textarea placeholder="Type your message here." />
+        </div>
+
+        {/* Toggle */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Toggle</h4>
+          <Toggle ria-label="Toggle italic">
+            <Bold className="h-4 w-4" />
+          </Toggle>
+        </div>
+
+        {/* Toggle Group */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Toggle Group</h4>
+        </div>
+
+        {/* Tooltip */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Tooltip</h4>
         </div>
 
         {/* Button */}
