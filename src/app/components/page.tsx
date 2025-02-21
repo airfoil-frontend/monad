@@ -1,106 +1,51 @@
 'use client';
 
-import { Bold, ChevronsUpDown, Slash, Terminal } from 'lucide-react';
-import Image from 'next/image';
+import { Bold } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
 import { toast } from 'sonner';
 
-import { ChartSection } from '@/components/chart-section';
-import { CheckboxForm } from '@/components/checkbox-form';
-import { CommandDialogDemo } from '@/components/command-demo';
-import { ContextMenuDemo } from '@/components/context-menu-demo';
-import { DatePickerForm } from '@/components/date-picker-form';
-import { DrawerDemo } from '@/components/drawer-demo';
-import { DropdownMenuDemo } from '@/components/dropdown-menu-demo';
-import { FormInput } from '@/components/form-input';
-import { HoverCardDemo } from '@/components/hover-card-demo';
-import { InputOTPDemo } from '@/components/input-otp-demo';
-import { MenubarDemo } from '@/components/menubar-demo';
-import { NavigationMenuDemo } from '@/components/navigation-menu-demo';
-import { PaginationDemo } from '@/components/pagination-demo';
-import { ProgressDemo } from '@/components/progress-demo';
-import { RadioGroupDemo } from '@/components/radio-group-demo';
-import { ResizableDemo } from '@/components/resizable-demo';
-import { ScrollAreaDemo } from '@/components/scroll-area-demo';
-import { SeparatorDemo } from '@/components/separator-demo';
-import { SheetDemo } from '@/components/sheet-demo';
-import { SkeletonDemo } from '@/components/skeleton-demo';
-import { SliderDemo } from '@/components/slider-demo';
-import { SwitchDemo } from '@/components/switch-demo';
-import { TableDemo } from '@/components/table-demo';
-import { TabsDemo } from '@/components/tabs-demo';
-import { ToggleGroupDemo } from '@/components/toggle-group-demo';
-import { ModeToggle } from '@/components/toggle-mode';
-import { TooltipDemo } from '@/components/tooltip-demo';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import {
-  Breadcrumb,
-  BreadcrumbEllipsis,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+import { AccordionDemo } from '@/components/demo/accordion-demo';
+import { AlertDemo } from '@/components/demo/alert-demo';
+import { AlertDialogDemo } from '@/components/demo/alert-dialog-demo';
+import { AspectRatioDemo } from '@/components/demo/aspect-ratio-demo';
+import { AvatarDemo } from '@/components/demo/avatar-demo';
+import { BadgeDemo } from '@/components/demo/badge-demo';
+import { BreadcrumbDemo } from '@/components/demo/breadcrumb-demo';
+import { ButtonDemo } from '@/components/demo/button-demo';
+import { CalendarDemo } from '@/components/demo/calendar-demo';
+import { CardDemo } from '@/components/demo/card-demo';
+import { CarouselDemo } from '@/components/demo/carousel-demo';
+import { ChartSection } from '@/components/demo/chart-section';
+import { CheckboxDemo } from '@/components/demo/checkbox-demo';
+import { CollapsibleDemo } from '@/components/demo/collapsible-demo';
+import { CommandDialogDemo } from '@/components/demo/command-demo';
+import { ContextMenuDemo } from '@/components/demo/context-menu-demo';
+import { DatePickerForm } from '@/components/demo/date-picker-form';
+import { DialogDemo } from '@/components/demo/dialog-demo';
+import { DrawerDemo } from '@/components/demo/drawer-demo';
+import { DropdownMenuDemo } from '@/components/demo/dropdown-menu-demo';
+import { FormInput } from '@/components/demo/form-input';
+import { HoverCardDemo } from '@/components/demo/hover-card-demo';
+import { InputOTPDemo } from '@/components/demo/input-otp-demo';
+import { MenubarDemo } from '@/components/demo/menubar-demo';
+import { NavigationMenuDemo } from '@/components/demo/navigation-menu-demo';
+import { PaginationDemo } from '@/components/demo/pagination-demo';
+import { ProgressDemo } from '@/components/demo/progress-demo';
+import { RadioGroupDemo } from '@/components/demo/radio-group-demo';
+import { ResizableDemo } from '@/components/demo/resizable-demo';
+import { ScrollAreaDemo } from '@/components/demo/scroll-area-demo';
+import { SeparatorDemo } from '@/components/demo/separator-demo';
+import { SheetDemo } from '@/components/demo/sheet-demo';
+import { SkeletonDemo } from '@/components/demo/skeleton-demo';
+import { SliderDemo } from '@/components/demo/slider-demo';
+import { SwitchDemo } from '@/components/demo/switch-demo';
+import { TableDemo } from '@/components/demo/table-demo';
+import { TabsDemo } from '@/components/demo/tabs-demo';
+import { ToggleGroupDemo } from '@/components/demo/toggle-group-demo';
+import { ModeToggle } from '@/components/demo/toggle-mode';
+import { TooltipDemo } from '@/components/demo/tooltip-demo';
 import { Button } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { Checkbox } from '@/components/ui/checkbox';
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@/components/ui/collapsible';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
@@ -121,9 +66,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Toggle } from '@/components/ui/toggle';
 
 const ComponentsPage = () => {
-  const [date, setDate] = useState<Date | undefined>(new Date());
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
   return (
     <div className="bg-background">
       <div className="bg-background sticky top-0 z-10 flex w-full items-start justify-between border-b border-gray-500/20 px-4 py-4 shadow-sm">
@@ -140,257 +82,67 @@ const ComponentsPage = () => {
         {/* Accordion */}
         <div className="flex w-full max-w-md flex-col space-y-4">
           <h4 className="text-lg font-medium">Accordion</h4>
-          <Accordion collapsible className="w-full" type="single">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Is it styled?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It comes with default styles that matches the other
-                components&apos; aesthetic.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Is it animated?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It is animated by default, but you can disable it if you
-                prefer.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <AccordionDemo />
         </div>
 
         {/* Alert */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Alert</h4>
-          <Alert>
-            <Terminal className="h-4 w-4" />
-            <AlertTitle>Heads up!</AlertTitle>
-            <AlertDescription>
-              You can add components to your app using the cli.
-            </AlertDescription>
-          </Alert>
+          <AlertDemo />
         </div>
 
         {/* Alert Dialog */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Alert Dialog</h4>
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <Button variant="outline">Show Dialog</Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-                <AlertDialogDescription>
-                  This action cannot be undone. This will permanently delete
-                  your account and remove your data from our servers.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction>Continue</AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <AlertDialogDemo />
         </div>
 
         {/* Aspect Ratio */}
         <div className="flex w-full max-w-4xl flex-col space-y-4">
           <h4 className="text-lg font-medium">Aspect Ratio</h4>
-          <AspectRatio className="bg-muted" ratio={16 / 9}>
-            <Image
-              fill
-              alt="Photo by Drew Beamer"
-              className="h-full w-full rounded-md object-cover"
-              src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
-            />
-          </AspectRatio>
+          <AspectRatioDemo />
         </div>
 
         {/* Avatar */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Avatar</h4>
-          <Avatar>
-            <AvatarImage
-              alt="@airfoil-frontend"
-              src="https://github.com/airfoil-frontend.png"
-            />
-            <AvatarFallback>AF</AvatarFallback>
-          </Avatar>
+          <AvatarDemo />
         </div>
 
         {/* Badge */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Badge</h4>
-          <Badge>Badge</Badge>
+          <BadgeDemo />
         </div>
 
         {/* Breadcrumb */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Breadcrumb</h4>
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center gap-1">
-                    <BreadcrumbEllipsis className="h-4 w-4" />
-                    <span className="sr-only">Toggle menu</span>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem>Documentation</DropdownMenuItem>
-                    <DropdownMenuItem>Themes</DropdownMenuItem>
-                    <DropdownMenuItem>GitHub</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/docs/components">
-                  Components
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator>
-                <Slash />
-              </BreadcrumbSeparator>
-              <BreadcrumbItem>
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center gap-1">
-                    <BreadcrumbEllipsis className="h-4 w-4" />
-                    <span className="sr-only">Toggle menu</span>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    <DropdownMenuItem>Documentation</DropdownMenuItem>
-                    <DropdownMenuItem>Themes</DropdownMenuItem>
-                    <DropdownMenuItem>GitHub</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator>
-                <Slash />
-              </BreadcrumbSeparator>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/docs/components">
-                  Components
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator>
-                <Slash />
-              </BreadcrumbSeparator>
-              <BreadcrumbItem>
-                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+          <BreadcrumbDemo />
         </div>
 
         {/* Button */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Button</h4>
-          <div className="flex flex-row flex-wrap items-center gap-4">
-            <Button>Button</Button>
-            <Button variant="secondary">Button</Button>
-            <Button variant="destructive">Button</Button>
-            <Button variant="outline">Button</Button>
-            <Button variant="ghost">Button</Button>
-            <Button variant="link">Button</Button>
-          </div>
+          <ButtonDemo />
         </div>
 
         {/* Calendar */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Calendar</h4>
-          <Calendar
-            className="rounded-md border shadow"
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-          />
+          <CalendarDemo />
         </div>
 
         {/* Card */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Card</h4>
-          <Card className="w-[350px]">
-            <CardHeader>
-              <CardTitle>Create project</CardTitle>
-              <CardDescription>
-                Deploy your new project in one-click.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form>
-                <div className="grid w-full items-center gap-4">
-                  <div className="flex flex-col space-y-1.5">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Name of your project" />
-                  </div>
-                  <div className="flex flex-col space-y-1.5">
-                    <Label htmlFor="framework">Framework</Label>
-                    <Select>
-                      <SelectTrigger id="framework">
-                        <SelectValue placeholder="Select" />
-                      </SelectTrigger>
-                      <SelectContent position="popper">
-                        <SelectItem value="next">Next.js</SelectItem>
-                        <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                        <SelectItem value="astro">Astro</SelectItem>
-                        <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-              </form>
-            </CardContent>
-            <CardFooter className="flex justify-between">
-              <Button variant="outline">Cancel</Button>
-              <Button>Deploy</Button>
-            </CardFooter>
-          </Card>
+          <CardDemo />
         </div>
 
         {/* Carousel */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Carousel</h4>
-          <Carousel className="w-full max-w-xs">
-            <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-4xl font-semibold">
-                          {index + 1}
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          <CarouselDemo />
         </div>
 
         {/* Chart */}
@@ -402,63 +154,13 @@ const ComponentsPage = () => {
         {/* Checkbox */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Checkbox</h4>
-          <div className="flex items-center space-x-2">
-            <Checkbox id="terms" />
-            <label
-              className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              htmlFor="terms"
-            >
-              Accept terms and conditions
-            </label>
-          </div>
-          <div className="items-top flex space-x-2">
-            <Checkbox id="terms1" />
-            <div className="grid gap-1.5 leading-none">
-              <label
-                className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                htmlFor="terms1"
-              >
-                Accept terms and conditions
-              </label>
-              <p className="text-muted-foreground text-sm">
-                You agree to our Terms of Service and Privacy Policy.
-              </p>
-            </div>
-          </div>
-          <CheckboxForm />
+          <CheckboxDemo />
         </div>
 
         {/* Collapsible */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Collapsible</h4>
-          <Collapsible
-            className="w-[350px] space-y-2"
-            open={isCollapsed}
-            onOpenChange={setIsCollapsed}
-          >
-            <div className="flex items-center justify-between space-x-4 px-4">
-              <h4 className="text-sm font-semibold">
-                @peduarte starred 3 repositories
-              </h4>
-              <CollapsibleTrigger asChild>
-                <Button size="sm" variant="ghost">
-                  <ChevronsUpDown className="h-4 w-4" />
-                  <span className="sr-only">Toggle</span>
-                </Button>
-              </CollapsibleTrigger>
-            </div>
-            <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
-              @radix-ui/primitives
-            </div>
-            <CollapsibleContent className="space-y-2">
-              <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
-                @radix-ui/colors
-              </div>
-              <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
-                @stitches/react
-              </div>
-            </CollapsibleContent>
-          </Collapsible>
+          <CollapsibleDemo />
         </div>
 
         {/* Command */}
@@ -490,45 +192,7 @@ const ComponentsPage = () => {
         {/* Dialog */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Dialog</h4>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant="outline">Edit Profile</Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Edit profile</DialogTitle>
-                <DialogDescription>
-                  Make changes to your profile here. Click save when you are
-                  done.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 py-4">
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label className="text-right" htmlFor="name">
-                    Name
-                  </Label>
-                  <Input
-                    className="col-span-3"
-                    defaultValue="Pedro Duarte"
-                    id="name"
-                  />
-                </div>
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label className="text-right" htmlFor="username">
-                    Username
-                  </Label>
-                  <Input
-                    className="col-span-3"
-                    defaultValue="@peduarte"
-                    id="username"
-                  />
-                </div>
-              </div>
-              <DialogFooter>
-                <Button type="submit">Save changes</Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
+          <DialogDemo />
         </div>
 
         {/* Drawer */}
@@ -579,13 +243,9 @@ const ComponentsPage = () => {
         {/* Label */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Label</h4>
-          <div>
-            <div className="flex items-center space-x-2">
-              <Checkbox id="terms-condition" />
-              <Label htmlFor="terms-condition">
-                Accept terms and conditions
-              </Label>
-            </div>
+          <div className="flex items-center space-x-2">
+            <Checkbox id="terms-condition" />
+            <Label htmlFor="terms-condition">Accept terms and conditions</Label>
           </div>
         </div>
 
