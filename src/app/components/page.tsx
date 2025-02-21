@@ -1,6 +1,6 @@
 'use client';
 
-import { Slash, Terminal } from 'lucide-react';
+import { ChevronsUpDown, Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -57,6 +57,11 @@ import {
 } from '@/components/ui/carousel';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible';
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -76,6 +81,7 @@ import {
 
 const ComponentsPage = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <div className="bg-background">
@@ -379,6 +385,39 @@ const ComponentsPage = () => {
             </div>
           </div>
           <CheckboxForm />
+        </div>
+
+        {/* Collapsible */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Collapsible</h4>
+          <Collapsible
+            className="w-[350px] space-y-2"
+            open={isCollapsed}
+            onOpenChange={setIsCollapsed}
+          >
+            <div className="flex items-center justify-between space-x-4 px-4">
+              <h4 className="text-sm font-semibold">
+                @peduarte starred 3 repositories
+              </h4>
+              <CollapsibleTrigger asChild>
+                <Button size="sm" variant="ghost">
+                  <ChevronsUpDown className="h-4 w-4" />
+                  <span className="sr-only">Toggle</span>
+                </Button>
+              </CollapsibleTrigger>
+            </div>
+            <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
+              @radix-ui/primitives
+            </div>
+            <CollapsibleContent className="space-y-2">
+              <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
+                @radix-ui/colors
+              </div>
+              <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
+                @stitches/react
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
         </div>
 
         {/* Form */}
