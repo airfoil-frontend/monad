@@ -19,6 +19,7 @@ import { MenubarDemo } from '@/components/menubar-demo';
 import { NavigationMenuDemo } from '@/components/navigation-menu-demo';
 import { PaginationDemo } from '@/components/pagination-demo';
 import { ProgressDemo } from '@/components/progress-demo';
+import { RadioGroupDemo } from '@/components/radio-group-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -650,6 +651,12 @@ const ComponentsPage = () => {
         <div className="flex w-full max-w-lg flex-col space-y-4">
           <h4 className="text-lg font-medium">Progress</h4>
           <ProgressDemo />
+        </div>
+
+        {/* Radio Group */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Radio Group</h4>
+          <RadioGroupDemo />
         </div>
 
         {/* Select */}
