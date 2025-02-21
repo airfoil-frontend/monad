@@ -16,6 +16,7 @@ import { FormInput } from '@/components/form-input';
 import { HoverCardDemo } from '@/components/hover-card-demo';
 import { InputOTPDemo } from '@/components/input-otp-demo';
 import { MenubarDemo } from '@/components/menubar-demo';
+import { NavigationMenuDemo } from '@/components/navigation-menu-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -575,6 +576,12 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Menubar</h4>
           <MenubarDemo />
+        </div>
+
+        {/* Navigation Menu */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Navigation Menu</h4>
+          <NavigationMenuDemo />
         </div>
 
         {/* Popover */}
