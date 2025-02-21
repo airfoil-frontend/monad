@@ -32,6 +32,7 @@ import { TableDemo } from '@/components/table-demo';
 import { TabsDemo } from '@/components/tabs-demo';
 import { ToggleGroupDemo } from '@/components/toggle-group-demo';
 import { ModeToggle } from '@/components/toggle-mode';
+import { TooltipDemo } from '@/components/tooltip-demo';
 import {
   Accordion,
   AccordionContent,
@@ -788,11 +789,7 @@ const ComponentsPage = () => {
         {/* Tooltip */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Tooltip</h4>
-        </div>
-
-        {/* Button */}
-        <div className="flex flex-col space-y-4">
-          <h4 className="text-lg font-medium">Button</h4>
+          <TooltipDemo />
         </div>
       </div>
     </div>
