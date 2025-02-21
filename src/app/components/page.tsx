@@ -18,6 +18,7 @@ import { InputOTPDemo } from '@/components/input-otp-demo';
 import { MenubarDemo } from '@/components/menubar-demo';
 import { NavigationMenuDemo } from '@/components/navigation-menu-demo';
 import { PaginationDemo } from '@/components/pagination-demo';
+import { ProgressDemo } from '@/components/progress-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -643,6 +644,12 @@ const ComponentsPage = () => {
               </div>
             </PopoverContent>
           </Popover>
+        </div>
+
+        {/* Progress */}
+        <div className="flex w-full max-w-lg flex-col space-y-4">
+          <h4 className="text-lg font-medium">Progress</h4>
+          <ProgressDemo />
         </div>
 
         {/* Select */}
