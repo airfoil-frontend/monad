@@ -23,6 +23,7 @@ import { RadioGroupDemo } from '@/components/radio-group-demo';
 import { ResizableDemo } from '@/components/resizable-demo';
 import { ScrollAreaDemo } from '@/components/scroll-area-demo';
 import { SeparatorDemo } from '@/components/separator-demo';
+import { SheetDemo } from '@/components/sheet-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -698,6 +699,12 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Separator</h4>
           <SeparatorDemo />
+        </div>
+
+        {/* Sheet */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Sheet</h4>
+          <SheetDemo />
         </div>
 
         {/* Button */}
