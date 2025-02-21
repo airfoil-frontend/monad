@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 import { ChartSection } from '@/components/chart-section';
 import { CheckboxForm } from '@/components/checkbox-form';
+import { CommandDialogDemo } from '@/components/command-demo';
 import { FormInput } from '@/components/form-input';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
@@ -418,6 +419,12 @@ const ComponentsPage = () => {
               </div>
             </CollapsibleContent>
           </Collapsible>
+        </div>
+
+        {/* Command */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Command</h4>
+          <CommandDialogDemo />
         </div>
 
         {/* Form */}
