@@ -4,6 +4,7 @@ import { Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
+import { FormInput } from '@/components/form-input';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -251,6 +252,12 @@ const ComponentsPage = () => {
             selected={date}
             onSelect={setDate}
           />
+        </div>
+
+        {/* Form */}
+        <div className="flex w-full max-w-sm flex-col space-y-4">
+          <h4 className="text-lg font-medium">Form</h4>
+          <FormInput />
         </div>
 
         {/* Input */}
