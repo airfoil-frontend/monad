@@ -43,6 +43,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 const ComponentsPage = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -249,6 +251,21 @@ const ComponentsPage = () => {
             selected={date}
             onSelect={setDate}
           />
+        </div>
+
+        {/* Input */}
+        <div className="flex w-full max-w-sm flex-col space-y-4">
+          <h4 className="text-lg font-medium">Input</h4>
+          <Input placeholder="Email" type="email" />
+
+          <div className="grid w-full max-w-sm items-center gap-1.5">
+            <Label htmlFor="input-with-label">Input with label</Label>
+            <Input
+              id="input-with-label"
+              placeholder="Input with label"
+              type="input-with-label"
+            />
+          </div>
         </div>
 
         {/* Button */}
