@@ -10,6 +10,8 @@ import { CheckboxForm } from '@/components/checkbox-form';
 import { CommandDialogDemo } from '@/components/command-demo';
 import { ContextMenuDemo } from '@/components/context-menu-demo';
 import { DatePickerForm } from '@/components/date-picker-form';
+import { DrawerDemo } from '@/components/drawer-demo';
+import { DropdownMenuDemo } from '@/components/dropdown-menu-demo';
 import { FormInput } from '@/components/form-input';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
@@ -506,6 +508,18 @@ const ComponentsPage = () => {
               </DialogFooter>
             </DialogContent>
           </Dialog>
+        </div>
+
+        {/* Drawer */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Drawer</h4>
+          <DrawerDemo />
+        </div>
+
+        {/* Dropdown Menu */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Dropdown Menu</h4>
+          <DropdownMenuDemo />
         </div>
 
         {/* Form */}
