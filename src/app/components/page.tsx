@@ -2,11 +2,13 @@
 
 import { ChevronsUpDown, Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 import { ChartSection } from '@/components/chart-section';
 import { CheckboxForm } from '@/components/checkbox-form';
 import { CommandDialogDemo } from '@/components/command-demo';
+import { ContextMenuDemo } from '@/components/context-menu-demo';
 import { FormInput } from '@/components/form-input';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
@@ -425,6 +427,20 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Command</h4>
           <CommandDialogDemo />
+        </div>
+
+        {/* Context Menu */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Context Menu</h4>
+          <ContextMenuDemo />
+        </div>
+
+        {/* Data Table */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Data Table</h4>
+          <Link href="/components/payments">
+            <Button>See demo</Button>
+          </Link>
         </div>
 
         {/* Form */}
