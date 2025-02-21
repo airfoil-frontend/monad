@@ -24,8 +24,8 @@ This is a Next.js project that uses Tailwind CSS v4 and shadcn/ui components to 
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/airfoil.git
-   cd airfoil/monad/monad
+   git clone https://github.com/airfoil-frontend/monad
+   cd monad
    ```
 
 2. Install dependencies (assuming you're using pnpm):
