@@ -20,6 +20,8 @@ import { NavigationMenuDemo } from '@/components/navigation-menu-demo';
 import { PaginationDemo } from '@/components/pagination-demo';
 import { ProgressDemo } from '@/components/progress-demo';
 import { RadioGroupDemo } from '@/components/radio-group-demo';
+import { ResizableDemo } from '@/components/resizable-demo';
+import { ScrollAreaDemo } from '@/components/scroll-area-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -657,6 +659,18 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Radio Group</h4>
           <RadioGroupDemo />
+        </div>
+
+        {/* Resizable */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Resizable</h4>
+          <ResizableDemo />
+        </div>
+
+        {/* Scroll Area */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Scroll Area</h4>
+          <ScrollAreaDemo />
         </div>
 
         {/* Select */}
