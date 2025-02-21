@@ -15,6 +15,7 @@ import { DropdownMenuDemo } from '@/components/dropdown-menu-demo';
 import { FormInput } from '@/components/form-input';
 import { HoverCardDemo } from '@/components/hover-card-demo';
 import { InputOTPDemo } from '@/components/input-otp-demo';
+import { MenubarDemo } from '@/components/menubar-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -568,6 +569,12 @@ const ComponentsPage = () => {
               </Label>
             </div>
           </div>
+        </div>
+
+        {/* Menubar */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Menubar</h4>
+          <MenubarDemo />
         </div>
 
         {/* Popover */}
