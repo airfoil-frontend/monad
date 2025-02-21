@@ -55,7 +55,9 @@ function MenubarTrigger({
   return (
     <MenubarPrimitive.Trigger
       className={cn(
-        'focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex items-center rounded-sm px-2 py-1 text-sm font-medium outline-hidden select-none',
+        'focus:text-accent-foreground data-[state=open]:text-accent-foreground flex items-center rounded-sm px-2 py-1 text-sm font-medium outline-hidden select-none',
+        'dark:focus:text-purple-foreground focus:bg-purple-50 dark:focus:bg-purple-500',
+        'data-[state=open]:bg-purple-50 dark:data-[state=open]:bg-purple-500',
         className,
       )}
       data-slot="menubar-trigger"

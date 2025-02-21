@@ -37,7 +37,7 @@ export function TabsDemo() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save changes</Button>
+            <Button variant="cta-solid">Save changes</Button>
           </CardFooter>
         </Card>
       </TabsContent>
@@ -60,7 +60,7 @@ export function TabsDemo() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save password</Button>
+            <Button variant="cta-solid">Save password</Button>
           </CardFooter>
         </Card>
       </TabsContent>

@@ -122,7 +122,12 @@
 
   /* Override colors */
   --color-purple-400: hsla(249, 92%, 76%, 1);
+  --color-purple-500: hsla(249, 92%, 70%, 1);
   --color-purple-600: hsla(249, 100%, 66%, 1);
+  --color-purple-900: hsla(263, 100%, 16%, 1);
+
+  --color-zinc-100: hsla(240, 5%, 96%, 1);
+  --color-zinc-800: hsla(240, 4%, 16%, 1);
 
   @keyframes accordion-down {
     from {

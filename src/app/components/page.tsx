@@ -18,6 +18,7 @@ import { CarouselDemo } from '@/components/demo/carousel-demo';
 import { ChartSection } from '@/components/demo/chart-section';
 import { CheckboxDemo } from '@/components/demo/checkbox-demo';
 import { CollapsibleDemo } from '@/components/demo/collapsible-demo';
+import { ComboboxDemo } from '@/components/demo/combobox-demo';
 import { CommandDialogDemo } from '@/components/demo/command-demo';
 import { ContextMenuDemo } from '@/components/demo/context-menu-demo';
 import { DatePickerForm } from '@/components/demo/date-picker-form';
@@ -161,6 +162,12 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Collapsible</h4>
           <CollapsibleDemo />
+        </div>
+
+        {/* Combobox */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Combobox</h4>
+          <ComboboxDemo />
         </div>
 
         {/* Command */}

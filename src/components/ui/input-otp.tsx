@@ -49,7 +49,7 @@ function InputOTPSlot({
   return (
     <div
       className={cn(
-        'border-input ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 relative flex h-9 w-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-4 data-[active=true]:outline-1',
+        'border-input relative flex h-9 w-9 items-center justify-center border-y border-r text-sm shadow-xs ring-purple-500 outline-purple-500 transition-all first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-2 data-[active=true]:outline-none',
         className,
       )}
       data-active={isActive}

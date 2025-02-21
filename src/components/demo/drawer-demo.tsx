@@ -79,9 +79,9 @@ export function DrawerDemo() {
           <div className="p-4 pb-0">
             <div className="flex items-center justify-center space-x-2">
               <Button
+                icon
                 className="h-8 w-8 shrink-0 rounded-full"
                 disabled={goal <= 200}
-                size="icon"
                 variant="outline"
                 onClick={() => onClick(-10)}
               >
@@ -97,9 +97,9 @@ export function DrawerDemo() {
                 </div>
               </div>
               <Button
+                icon
                 className="h-8 w-8 shrink-0 rounded-full"
                 disabled={goal >= 400}
-                size="icon"
                 variant="outline"
                 onClick={() => onClick(10)}
               >
@@ -124,7 +124,7 @@ export function DrawerDemo() {
             </div>
           </div>
           <DrawerFooter>
-            <Button>Submit</Button>
+            <Button variant="cta-solid">Submit</Button>
             <DrawerClose asChild>
               <Button variant="outline">Cancel</Button>
             </DrawerClose>
