@@ -28,6 +28,7 @@ import { SheetDemo } from '@/components/sheet-demo';
 import { SkeletonDemo } from '@/components/skeleton-demo';
 import { SliderDemo } from '@/components/slider-demo';
 import { SwitchDemo } from '@/components/switch-demo';
+import { TableDemo } from '@/components/table-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -746,6 +747,12 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Switch</h4>
           <SwitchDemo />
+        </div>
+
+        {/* Table */}
+        <div className="flex w-full max-w-xl flex-col space-y-4">
+          <h4 className="text-lg font-medium">Table</h4>
+          <TableDemo />
         </div>
 
         {/* Button */}

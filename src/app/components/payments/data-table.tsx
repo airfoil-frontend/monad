@@ -14,19 +14,17 @@ import {
 } from '@tanstack/react-table';
 import { useState } from 'react';
 
-import { Input } from '@/components/ui/input';
 import {
   DataTablePagination,
   DataTableViewOptions,
-} from '@/components/ui/table';
-import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table/table';
+} from '@/components/ui/data-table';
+import { Input } from '@/components/ui/input';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

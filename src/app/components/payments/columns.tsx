@@ -6,6 +6,7 @@ import { MoreHorizontal } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
+import { DataTableColumnHeader } from '@/components/ui/data-table';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,7 +15,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { DataTableColumnHeader } from '@/components/ui/table';
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
