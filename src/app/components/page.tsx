@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import { ChartSection } from '@/components/chart-section';
+import { CheckboxForm } from '@/components/checkbox-form';
 import { FormInput } from '@/components/form-input';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
@@ -54,6 +55,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -348,6 +350,35 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Chart</h4>
           <ChartSection />
+        </div>
+
+        {/* Checkbox */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Checkbox</h4>
+          <div className="flex items-center space-x-2">
+            <Checkbox id="terms" />
+            <label
+              className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              htmlFor="terms"
+            >
+              Accept terms and conditions
+            </label>
+          </div>
+          <div className="items-top flex space-x-2">
+            <Checkbox id="terms1" />
+            <div className="grid gap-1.5 leading-none">
+              <label
+                className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                htmlFor="terms1"
+              >
+                Accept terms and conditions
+              </label>
+              <p className="text-muted-foreground text-sm">
+                You agree to our Terms of Service and Privacy Policy.
+              </p>
+            </div>
+          </div>
+          <CheckboxForm />
         </div>
 
         {/* Form */}
