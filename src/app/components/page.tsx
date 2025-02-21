@@ -524,22 +524,16 @@ const ComponentsPage = () => {
           <DropdownMenuDemo />
         </div>
 
-        {/* Hover Card */}
-        <div className="flex flex-col space-y-4">
-          <h4 className="text-lg font-medium">Hover Card</h4>
-          <HoverCardDemo />
-        </div>
-
-        {/* Input OTP */}
-        <div className="flex flex-col space-y-4">
-          <h4 className="text-lg font-medium">Input OTP</h4>
-          <InputOTPDemo />
-        </div>
-
         {/* Form */}
         <div className="flex w-full max-w-sm flex-col space-y-4">
           <h4 className="text-lg font-medium">Form</h4>
           <FormInput />
+        </div>
+
+        {/* Hover Card */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Hover Card</h4>
+          <HoverCardDemo />
         </div>
 
         {/* Input */}
@@ -554,6 +548,25 @@ const ComponentsPage = () => {
               placeholder="Input with label"
               type="input-with-label"
             />
+          </div>
+        </div>
+
+        {/* Input OTP */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Input OTP</h4>
+          <InputOTPDemo />
+        </div>
+
+        {/* Label */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Label</h4>
+          <div>
+            <div className="flex items-center space-x-2">
+              <Checkbox id="terms-condition" />
+              <Label htmlFor="terms-condition">
+                Accept terms and conditions
+              </Label>
+            </div>
           </div>
         </div>
 
