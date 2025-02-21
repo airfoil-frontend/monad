@@ -24,6 +24,7 @@ import { ResizableDemo } from '@/components/resizable-demo';
 import { ScrollAreaDemo } from '@/components/scroll-area-demo';
 import { SeparatorDemo } from '@/components/separator-demo';
 import { SheetDemo } from '@/components/sheet-demo';
+import { SkeletonDemo } from '@/components/skeleton-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -705,6 +706,12 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Sheet</h4>
           <SheetDemo />
+        </div>
+
+        {/* Skeleton */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Skeleton</h4>
+          <SkeletonDemo />
         </div>
 
         {/* Button */}
