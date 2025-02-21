@@ -9,6 +9,8 @@ export const ButtonDemo = () => {
       <Button variant="outline">Button</Button>
       <Button variant="ghost">Button</Button>
       <Button variant="link">Button</Button>
+      <Button variant="cta-solid">Button</Button>
+      <Button variant="cta-gradient">Button</Button>
     </div>
   );
 };

@@ -120,6 +120,10 @@
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
 
+  /* Override colors */
+  --color-purple-400: hsla(249, 92%, 76%, 1);
+  --color-purple-600: hsla(249, 100%, 66%, 1);
+
   @keyframes accordion-down {
     from {
       height: 0;
