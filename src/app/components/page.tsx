@@ -4,6 +4,7 @@ import { Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
+import { ChartSection } from '@/components/chart-section';
 import { FormInput } from '@/components/form-input';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
@@ -341,6 +342,12 @@ const ComponentsPage = () => {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+        </div>
+
+        {/* Chart */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Chart</h4>
+          <ChartSection />
         </div>
 
         {/* Form */}
