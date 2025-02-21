@@ -45,7 +45,7 @@ This is a Next.js project template proudly presented by Airfoil Engineering to b
 - Navigate to /dashboard for the dashboard layout
 - Head to /login to see the login example in action
 - Explore /components for a list of reusable UI components
-- Chek out /components/payments to view a data table demonstration
+- Check out /components/payments to view a data table demonstration
 
 ## Additional information
 
