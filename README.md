@@ -1,62 +1,52 @@
-# Getting Started
+# Airfoil Monad
 
-Install dependencies with pnpm:
+This is a Next.js project that uses Tailwind CSS v4 and shadcn/ui components to build a modern web application.
 
-```bash
-pnpm install
-```
+## Overview
 
-Prepare husky
+- **Next.js** for server-side rendering and routing
+- **Tailwind CSS v4** for utility-first styling
+- **shadcn/ui** for pre-built, customizable UI components
 
-```bash
-pnpm prepare
-```
+## Pages
 
-Start local development server:
+<a href="https://ibb.co.com/p6NVTzpw"><img src="https://i.ibb.co.com/fVZ6Wp7F/Clean-Shot-2025-02-21-at-6-10-50.png" alt="Clean-Shot-2025-02-21-at-6-10-50" border="0"></a>
 
-```bash
-pnpm dev
-```
+<a href="https://ibb.co.com/nsdvtWp2"><img src="https://i.ibb.co.com/3y6qQJKX/Clean-Shot-2025-02-21-at-6-15-48.png" alt="Clean-Shot-2025-02-21-at-6-15-48" border="0"></a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **/dashboard**: Dashboard layout showcasing client data and analytics.
+- **/login**: Login page example for user authentication.
+- **/components**: Collection of reusable UI components.
+- **/components/payments**: Example implementation of a data table using shadcn components.
 
-## Configurations done in this template
+## Installation
 
-- Absolute file referencing e.g. "@/modules/components/Hello.tsx" via tsconfig
-- Modular file structure e.g."@/modules/common", "@/modules/ModuleName"
-- Dynamic layout support for reusing layout component across pages without re-declaring on each page
-- Using sass for tailwind config, and some boilerplate e.g. setting html, body elements, etc
-- Sorted imports e.g. alphabetical and in groups. Avoids git diff changes when imports are sorted differently between people
-- Requires vscode extensions like eslint and prettier
-- Use ./src as src directory for nextjs
-- Includes a `<meta>` reusable component PageHead to use in each page and also some default favicons
+1. Clone the repository:
 
-## Using the PageHead component
+   ```sh
+   git clone https://github.com/your-username/airfoil.git
+   cd airfoil/monad/monad
+   ```
 
-Use this component to quickly bootstrap the meta tags for the page
+2. Install dependencies (assuming you're using pnpm):
+   ```sh
+    pnpm install
+   ```
+3. Run the development server:
+   `sh
+ pnpm run dev
+ `
+   Visit `http://localhost:3000` to view the application.
 
-1. Go to PageHead component and update the `appName` const to your project's title
-2. Use PageHead in your `/pages/**/*` files
-3. Feel free to update the props as you see fit
+## Getting started
 
-## Using the CustomIcon component
+- Navigate to /dashboard for the dashboard layout
+- Head to /login to see the login example in action
+- Explore /components for a list of reusable UI components
+- Chek out /components/payments to view a data table demonstration
 
-1. Checkout the README file in that /modules/common/components/CustomIcon/README.md to learn more
+## Additional information
 
-## Packages used
-
-### ESLint related
-
-<https://github.com/typescript-eslint/typescript-eslint/tree/HEAD/packages/parser>
-
-<https://github.com/import-js/eslint-plugin-import/>
-
-<https://github.com/lydell/eslint-plugin-simple-import-sort>
-
-### VSCode extensions
-
-ESLint: <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>
-
-Prettier: <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>
-
-Tailwind CSS IntelliSense: <https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss>
+- **Tailwind CSS**: [Documentation](https://tailwindcss.com/docs)
+- **shadcn/ui**: [Documentation](https://ui.shadcn.com/)
+- **Next.js**: [Documentation](https://nextjs.org/docs)
