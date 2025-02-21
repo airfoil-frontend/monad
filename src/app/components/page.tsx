@@ -4,6 +4,7 @@ import { ChevronsUpDown, Slash, Terminal } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 import { ChartSection } from '@/components/chart-section';
 import { CheckboxForm } from '@/components/checkbox-form';
@@ -26,6 +27,7 @@ import { SeparatorDemo } from '@/components/separator-demo';
 import { SheetDemo } from '@/components/sheet-demo';
 import { SkeletonDemo } from '@/components/skeleton-demo';
 import { SliderDemo } from '@/components/slider-demo';
+import { SwitchDemo } from '@/components/switch-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -719,6 +721,31 @@ const ComponentsPage = () => {
         <div className="flex w-full max-w-lg flex-col space-y-4">
           <h4 className="text-lg font-medium">Slider</h4>
           <SliderDemo />
+        </div>
+
+        {/* Sonner */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Sonner</h4>
+          <Button
+            variant="outline"
+            onClick={() =>
+              toast('Event has been created', {
+                description: 'Sunday, December 03, 2023 at 9:00 AM',
+                action: {
+                  label: 'Undo',
+                  onClick: () => console.log('Undo'),
+                },
+              })
+            }
+          >
+            Show Toast
+          </Button>
+        </div>
+
+        {/* Switch */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Switch</h4>
+          <SwitchDemo />
         </div>
 
         {/* Button */}
