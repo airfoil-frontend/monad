@@ -30,6 +30,7 @@ import { SliderDemo } from '@/components/slider-demo';
 import { SwitchDemo } from '@/components/switch-demo';
 import { TableDemo } from '@/components/table-demo';
 import { TabsDemo } from '@/components/tabs-demo';
+import { ToggleGroupDemo } from '@/components/toggle-group-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -781,6 +782,7 @@ const ComponentsPage = () => {
         {/* Toggle Group */}
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Toggle Group</h4>
+          <ToggleGroupDemo />
         </div>
 
         {/* Tooltip */}
