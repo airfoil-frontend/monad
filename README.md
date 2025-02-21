@@ -1,6 +1,6 @@
 # Airfoil x Monad Hackathon UI Kit
 
-This is a Next.js project template proudly presented by Airfoil Engineering to build modern websites and applications with a UI kit built using shadcn/ui and Tailwind CSS v4 to get teams started immediately. 
+This is a Next.js project template proudly presented by Airfoil Engineering to build modern websites and applications with a UI kit built using shadcn/ui and Tailwind CSS v4 and default-themed to Monad's branding to get teams started immediately with extensive flexibility from styling to ready-to-use components.
 
 ## Overview
 
