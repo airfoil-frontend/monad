@@ -14,6 +14,7 @@ import { DrawerDemo } from '@/components/drawer-demo';
 import { DropdownMenuDemo } from '@/components/dropdown-menu-demo';
 import { FormInput } from '@/components/form-input';
 import { HoverCardDemo } from '@/components/hover-card-demo';
+import { InputOTPDemo } from '@/components/input-otp-demo';
 import { ModeToggle } from '@/components/toggle-mode';
 import {
   Accordion,
@@ -527,6 +528,12 @@ const ComponentsPage = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-medium">Hover Card</h4>
           <HoverCardDemo />
+        </div>
+
+        {/* Input OTP */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Input OTP</h4>
+          <InputOTPDemo />
         </div>
 
         {/* Form */}
