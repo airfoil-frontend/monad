@@ -33,9 +33,11 @@ This is a Next.js project that uses Tailwind CSS v4 and shadcn/ui components to 
     pnpm install
    ```
 3. Run the development server:
-   `sh
- pnpm run dev
- `
+
+   ```sh
+    pnpm run dev
+   ```
+
    Visit `http://localhost:3000` to view the application.
 
 ## Getting started
