@@ -47,6 +47,13 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -310,6 +317,30 @@ const ComponentsPage = () => {
               <Button>Deploy</Button>
             </CardFooter>
           </Card>
+        </div>
+
+        {/* Carousel */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Carousel</h4>
+          <Carousel className="w-full max-w-xs">
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">
+                          {index + 1}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* Form */}
