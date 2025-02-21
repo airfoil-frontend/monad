@@ -46,6 +46,15 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 const ComponentsPage = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -273,6 +282,26 @@ const ComponentsPage = () => {
               type="input-with-label"
             />
           </div>
+        </div>
+
+        {/* Select */}
+        <div className="flex flex-col space-y-4">
+          <h4 className="text-lg font-medium">Select</h4>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Select a fruit" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Fruits</SelectLabel>
+                <SelectItem value="apple">Apple</SelectItem>
+                <SelectItem value="banana">Banana</SelectItem>
+                <SelectItem value="blueberry">Blueberry</SelectItem>
+                <SelectItem value="grapes">Grapes</SelectItem>
+                <SelectItem value="pineapple">Pineapple</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
 
         {/* Button */}
