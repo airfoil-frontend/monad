@@ -2,12 +2,13 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
+  AccordionProps,
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-export function AccordionDemo() {
+export function AccordionDemo({ ...props }: AccordionProps) {
   return (
-    <Accordion collapsible className="w-full" type="single">
+    <Accordion className="w-full" type="single" {...props}>
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>

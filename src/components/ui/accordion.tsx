@@ -6,6 +6,10 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+export type AccordionProps = React.ComponentProps<
+  typeof AccordionPrimitive.Root
+>;
+
 function Accordion({
   ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Root>) {
